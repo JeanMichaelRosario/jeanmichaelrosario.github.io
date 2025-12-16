@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <title>Impostor</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">IMPOSTOR</div>
+      <button id="resetBtn" class="ghost" type="button" aria-label="Reiniciar">Reiniciar</button>
+    </header>
+
+    <section id="root" class="card" aria-live="polite"></section>
+
+    <footer class="footer">
+      <span class="muted">Funciona sin internet (después de la primera carga).</span>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
