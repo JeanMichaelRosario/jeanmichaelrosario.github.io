@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Palabras de Canciones</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">PALABRAS DE CANCIONES</div>
+      <div class="row">
+        <button id="copyBtn" class="ghost" type="button" title="Copiar palabra">Copiar</button>
+        <button id="resetBtn" class="ghost" type="button" title="Reiniciar">Reiniciar</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <h1>Generador de palabras</h1>
+      <p class="muted">
+        Palabras comunes en letras (enfocado en español y uso cotidiano). Ideal para jugar en familia:
+        describe la palabra, cántala, actúala o inventa una frase.
+      </p>
+
+      <div class="controls">
+        <label class="switch">
+          <input id="familyMode" type="checkbox" checked />
+          <span class="slider"></span>
+          <span class="labelText">Modo familiar (filtra palabras subidas de tono)</span>
+        </label>
+
+        <label class="switch">
+          <input id="includeSlang" type="checkbox" />
+          <span class="slider"></span>
+          <span class="labelText">Incluir jerga urbana (suave)</span>
+        </label>
+      </div>
+
+      <div class="wordBox" aria-live="polite">
+        <div class="hint">Tu palabra:</div>
+        <div id="word" class="word">—</div>
+        <div id="meta" class="smallNote"></div>
+      </div>
+
+      <div class="row actions">
+        <button id="newBtn" class="primary" type="button">Nueva palabra</button>
+        <button id="undoBtn" type="button" disabled>Anterior</button>
+        <button id="clearHistoryBtn" type="button">Borrar historial</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Historial</h2>
+      <div id="history" class="history"></div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">Funciona sin internet (después de la primera carga) ✅</span>
+    </footer>
+  </main>
+
+  <script src="./words.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

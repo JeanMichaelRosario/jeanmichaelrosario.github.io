@@ -1,0 +1,9 @@
+{
+  "name": "Palabras de Canciones",
+  "short_name": "Palabras",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "lang": "es"
+}
